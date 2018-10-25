@@ -1,38 +1,55 @@
-body {
-     background: #2B292E;
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+
+ body{
+      background: #2B292E;   
+      overflow: hidden;  
+ }    
+
+h1 {
+     font-size: 40px;
+     margin-top: 20px;
+     font-family: 'Mali', cursive;
+     text-align: center;
+     color:#7044a0;
+     text-transform: uppercase;
+     letter-spacing: 23px;
+} 
+
+ #main {
      color: #fafafa;
      font-family: Helvetica, Arial, sans-serif;
+     display: flex;
+     overflow: hidden;
+     align-items: center;
+     justify-content: center;
+     min-height: 90vh;
+     font-size: 1.6rem;
 }
- h1{
-     text-align: center;
-     color: #7044a0;
-     text-decoration: underline;
-}
-div{
-     width:55%;
-     margin:0 auto;
-     padding:35px;
-}
+
  span {
      border-bottom: 1px solid #534f59;
      display: inline-block;
      font-size: 2rem;
-     height: 2.6rem;
+     height: 2.4rem;
      line-height: 2.4rem;
      margin: 0 .3rem;
      text-align: center;
      text-transform: uppercase;
-     width: 3.9rem;
+     width: 2.5rem;
 }
 
  p {
-     font-weight: 300;
-     margin-bottom: .8rem;
+     font-weight: 350;
+     margin-bottom: 1.2rem;
 }
 
  .puzzle {
      display: flex;
-     margin-bottom: 4.4rem;
+     margin-bottom: 4.8rem;
 }
 
  .button {
@@ -41,13 +58,15 @@ div{
      border-bottom: 2px solid #603a88;
      cursor: pointer;
      color: white;
+     border-radius: 6px;
      font-size: 1.4rem;
      font-weight: 300;
      padding: .8rem;
-     border-radius: 7px;
      transition: background .3s ease, color .3s ease;
 }
 
  .button:hover {
      background: #5F3A87;
 }
+
+
