@@ -1,4 +1,5 @@
 
+
 class Hangman {
   constructor(word,remainingChances){
     this.word = word.toLowerCase().split("");
@@ -36,6 +37,9 @@ class Hangman {
     let patt = "aeiou";
 
   	this.word.forEach((letter) => {
+      if(patt.includes(letter)){
+        this.guessedLetters.push(letter)
+      }
   		if(this.guessedLetters.includes(letter) || letter==" " || patt.includes(letter)){
   			puzzle += letter;
   		}
@@ -47,6 +51,7 @@ class Hangman {
   }
 
   makeGuess(guess) {
+    let patt = "aeiou";
     guess = guess.toLowerCase();
     const isUnique = !this.guessedLetters.includes(guess);
   	const isBad = !this.word.includes(guess)
@@ -56,7 +61,7 @@ class Hangman {
   	if(isUnique){
   		this.guessedLetters.push(guess)
   	}
-  	 if(isUnique && isBad){
+  	 if(isUnique && isBad && !patt.includes(guess)){
   		this.remainingChances--;
   	}
     this.calculateStatus();
